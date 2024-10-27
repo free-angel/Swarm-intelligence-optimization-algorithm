@@ -82,10 +82,10 @@ class PSO():
         return self.best_x, self.best_y
 
 if __name__ == '__main__':
-    n_dim = 30
+    n_dim = 2
     lb = [-100 for i in range(n_dim)]
     ub = [100 for i in range(n_dim)]
-    demo_func = test_function.fu2
+    demo_func = test_function.fn1
     pop_size = 100
     max_iter = 1000
     pso = PSO(func=demo_func, n_dim=n_dim, pop=100, max_iter=1000, lb=lb, ub=ub, w=0.8, c1=0.5, c2=0.5)

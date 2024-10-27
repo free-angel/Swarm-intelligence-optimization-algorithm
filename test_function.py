@@ -12,6 +12,9 @@ import math
 import random
 from scipy.stats import norm
 # Unimodal test functions
+def fn1(x):
+    return (x[0]-1)** 2+(x[1]-2)** 2
+
 def fu1(x):
     # Sphere function
     # min is 0 at [0 for i in range(len(x)]

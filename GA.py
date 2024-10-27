@@ -1,6 +1,8 @@
 import copy
 import test_function
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use("TkAgg")
 import random
 
 class GA():
@@ -97,7 +99,7 @@ class GA():
 
 if __name__ == '__main__':
 
-    test=GA(iterations=1000,n_dim=1,lb=-500,ub=500,pop_size=50,target_function=function,retain_rate=0.3,random_select_rate=0.2,mutation_probability=0.8)
+    test=GA(iterations=1000,n_dim=2,lb=-5,ub=5,pop_size=50,target_function=test_function.fn1,retain_rate=0.3,random_select_rate=0.2,mutation_probability=0.8)
     test.run()
     result=test.result()
     test.convergence_curve()

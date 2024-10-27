@@ -17,6 +17,9 @@ import math
 from scipy.stats import norm
 import random
 import test_function
+import matplotlib
+matplotlib.use("TkAgg")
+
 
 class SSA():
     def __init__(self, func, n_dim=None, pop_size=20, max_iter=50, lb=-512, ub=512, verbose=False):
@@ -145,10 +148,10 @@ class SSA():
         return self.best_x, self.best_y
 
 if __name__ == '__main__':
-    n_dim = 30
+    n_dim = 2
     lb = [-100 for i in range(n_dim)]
     ub = [100 for i in range(n_dim)]
-    demo_func = test_function.fu5
+    demo_func = test_function.fn1
     pop_size = 100
     max_iter = 100
     ssa = SSA(demo_func, n_dim=n_dim, pop_size=pop_size, max_iter=max_iter, lb=lb, ub=ub)
